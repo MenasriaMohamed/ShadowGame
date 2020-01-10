@@ -15,8 +15,8 @@ public class Line{
  } 
     
  
- public void DrawLine(){
-      stroke(153);
+ public void DrawLine(color col){
+      stroke(col);
       line(this.P1.x,this.P1.y,this.P2.x,this.P2.y);        
  }
   

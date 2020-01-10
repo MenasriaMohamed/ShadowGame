@@ -8,20 +8,28 @@ public class Form{
  
  public void DrawLines(){
    for(Line l : Lines){
-      l.DrawLine();  
+      l.DrawLine(153);  
    }  
  }
  
  ////////////////////////////////////Create Lines ////////////////////////////
  public void CreatLines(){
-   Line line ;      
+    Line line ;      
     line = new Line(10,0,0,512);
     line.LineValues();
     Lines.add(line);           
-   /* line = new Line(0,20,1012,0);  
+    line = new Line(0,20,1012,0);  
+     line.LineValues();    
+     Lines.add(line);      
+     line = new Line(990,0,1012,512);  
      line.LineValues();    
      Lines.add(line);  
-     */  
+     
+     line = new Line(0,490,1012,512);  
+     line.LineValues();    
+     Lines.add(line);  
+     
+       
  } 
  
  public ArrayList<Point> InterLines(Line l){

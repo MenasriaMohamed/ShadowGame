@@ -6,25 +6,16 @@ import java.util.*;
  void setup()
  { 
     size(1012,512);
-     Line1 = new Line(2 ,3 ,1 ,4);  
-    Line1.LineValues();
-    println(Line1.a +"   "+Line1.b);
-    Line2 = new Line(3 ,2 ,1 ,2);  
-    Line2.LineValues();    
-    println(Line2.a +"   "+Line2.b);
-    Point P = Line1.InterLine(Line2);
-    
-    println(P.x +"   "+P.y);
+   
      
  }
  void draw()
  { 
    clear();
    background(color(100,60,166));      
-   Line1.DrawLine();
-   Line2.DrawLine();
+     lamp.GetInterLines();
+  
    lamp.DrawLamp();     
-   lamp.GetInterLines();
    
 if(b==true){
      stroke(53);
