@@ -1,6 +1,6 @@
 public class Form{
  public  ArrayList<Line> Lines = new ArrayList<Line>();  
- private float step = 1;
+ private float err = 1;
   
  public Form(){
    this.CreatLines();  
@@ -37,7 +37,8 @@ public class Form{
    for(Line ll : Lines){
      p =l.InterLine(ll); 
       
-     if(p!=null && ((p.x>=ll.P1.x-step && p.x<=ll.P2.x+step)||(p.x>=ll.P2.x-step && p.x<=ll.P1.x+step))&&((p.y>=ll.P1.y-step && p.y<=ll.P2.y+step)||(p.y>=ll.P2.y-step && p.y<=ll.P1.y+step))){
+     if(p!=null && ((p.x>=ll.P1.x-err && p.x<=ll.P2.x+err)||(p.x>=ll.P2.x-err && p.x<=ll.P1.x+err))
+     &&((p.y>=ll.P1.y-err && p.y<=ll.P2.y+err)||(p.y>=ll.P2.y-err && p.y<=ll.P1.y+err))){
      
      Points.add(p);}
    }  

@@ -1,5 +1,6 @@
 public class Lamp {
  private int step =4; 
+ private float err =1 ;
  private float turn = 0.05;
  public Point PosLamp ;
  public Line Line1 ;
@@ -41,8 +42,14 @@ public class Lamp {
           }                
        }
        if(PP!=null)
+       
+                  
         this.Line1.Turn(PP.x,PP.y);
-      }
+      
+    
+    }
+      
+      
        
   }
    
