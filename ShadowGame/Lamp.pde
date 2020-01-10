@@ -26,38 +26,44 @@ public class Lamp {
   
   public void GetInterLines(){
     this.Line1.LineValues();
+    Point PP =null;
     float D;
+    float Dens =1000000;
     ArrayList<Point> Points =form.InterLines(this.Line1);
-    println(Points.size());
-       this.Line1.Turn(Points.get(0).x,Points.get(0).y);
+      println(Points.size());
+      if( Points!=null &&Points.size()>0){
        for(Point p : Points){
-          D=this.Line1.P1.distans(p);       
-          println(" dfdfdf"+D);      
-       }   
+           D=this.Line1.P1.distans(p);         
+           if(D<Dens){
+           Dens=D;
+           println(D);
+           PP=p;
+          }                
+       }
+       if(PP!=null)
+        this.Line1.Turn(PP.x,PP.y);
+      }
+       
   }
    
   
   public void Up(){  
    this.PosLamp.y=this.PosLamp.y-step;
    this.Line1.Up(step);       
-   GetInterLines();  
  }
   
   public void Down(){  
    this.PosLamp.y=this.PosLamp.y+step;   
    this.Line1.Down(step);
-  GetInterLines();  
-}
+ }
   public void Left(){
    this.PosLamp.x=this.PosLamp.x-step;
    this.Line1.Left(step);  
-   GetInterLines();  
   }
   
   public void Right(){
     this.PosLamp.x =this.PosLamp.x+step;
     this.Line1.Right(step);  
-    GetInterLines();     
   }
   
   
@@ -66,7 +72,6 @@ public class Lamp {
          float x = r * cos(theta) +this.PosLamp.x;
          float y = r * sin(theta) +this.PosLamp.y;
          this.Line1.Turn(x,y);    
-         GetInterLines();  
          theta += turn;                
        }else{
          theta = -2*PI;
@@ -78,7 +83,6 @@ public class Lamp {
          float x = r * cos(theta) +this.PosLamp.x;
          float y = r * sin(theta) +this.PosLamp.y;
          this.Line1.Turn(x,y);
-         GetInterLines();  
          theta -= turn;                
        }else{
          theta = 2*PI;

@@ -35,20 +35,20 @@ public class Line{
  
   public void Up(int step){  
     this.P1.y=this.P1.y-step;
-  //  this.P2.y=this.P2.y-step;    
+    this.P2.y=this.P2.y-step;    
   }
   
   public void Down(int step){  
      this.P1.y=this.P1.y+step;
-    // this.P2.y=this.P2.y+step;    
+     this.P2.y=this.P2.y+step;    
   }
   public void Left(int step){
        this.P1.x=this.P1.x-step;
-      // this.P2.x=this.P2.x-step;
+      this.P2.x=this.P2.x-step;
   }  
   public void Right(int step){
     this.P1.x=this.P1.x+step;
- //   this.P2.x=this.P2.x+step;
+    this.P2.x=this.P2.x+step;
   }
   public void Turn(float x,float y){
     this.P2.x=x;

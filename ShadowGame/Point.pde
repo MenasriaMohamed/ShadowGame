@@ -7,7 +7,7 @@ public class Point{
     }  
     
     public float distans(Point p){  
-      return sqrt(pow((this.x +p.x),2) -pow((this.y +p.y),2));
+      return sqrt(pow((this.x -p.x),2)+pow((this.y -p.y),2));
     }
     
 }

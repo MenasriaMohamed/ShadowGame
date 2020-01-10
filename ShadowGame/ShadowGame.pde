@@ -14,7 +14,9 @@ import java.util.*;
    clear();
    background(color(100,60,166));    
    lamp.DrawLamp();   
-   if(b==true){
+  
+lamp.GetInterLines();
+if(b==true){
      stroke(53);
      line(P1.x,P1.y ,mouseX,mouseY);
    }
