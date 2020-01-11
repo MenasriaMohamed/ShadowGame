@@ -1,7 +1,8 @@
 public class Line{
  float a =0 ;
  float b =0 ;
- Point P1,P2;  
+ Point P1,P2;
+ public float theta = 2;
  public Line(float P1x ,float P1y ,float P2x ,float P2y){
      P1 = new Point(P1x ,P1y);
      P2 = new Point(P2x ,P2y);     

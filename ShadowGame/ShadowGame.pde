@@ -14,6 +14,7 @@ import java.util.*;
    clear();
    background(color(100,60,166));      
      lamp.GetInterLines();
+      
   
    lamp.DrawLamp();     
    
